@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>xD</title>
+        <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+            
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <div class="container-fluid">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-header">
+                        La wea nueva
+                    </div>
+                    <div class="card-block">
+                        <form id="formulario" action='form.php' method="POST">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="aControl" placeholder="sddsf" required>
+                            </div>
+                             <div class="form-group">
+                                <input type="text" name="bControl" class="form-control" placeholder="asdf" required>
+                            </div>
+                             <div class="form-group">
+                                <input type="text" name="cControl" class="form-control" placeholder="sdfds" required>
+                            </div>
+                             <div class="form-group">
+                                <input type="button" name="ex" id="send" class="btn btn-danger" style="visibility:visible" value="tugfa xd">
+                                <input type="button" name="ex2" id="hidButton" class="btn btn-warning" style="visibility:hidden" value="laweax d">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $('#send').click(function(e){
+                e.preventDefault();
+                $('#hidButton').removeAttr('style');
+                $('#hidButton').attr('style','visibility:visible');
+                $('#send').removeAttr('style');
+                $('#send').attr('style','visibility:hidden');
+                $('#formulario').submit();
+            });
+
+        });
+        
+    </script>
+</html>

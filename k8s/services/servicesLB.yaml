@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: app-service-lb-production
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+  selector:
+    app: php-app
+    role: frontend
+    env: production
+

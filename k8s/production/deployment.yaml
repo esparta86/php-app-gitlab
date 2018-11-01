@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: app-frontend-prod
+  labels:
+    app: app-frontend-prod
+spec:
+  template:
+    metadata:
+      name: app-frontend-prod
+      labels:
+        app: app-frontend-prod
+      labels:
+        app: php-app
+        role: frontend
+        env: production
+    spec:
+      containers:
+        - name: web
+          image: gcr.io/esparta86project/php-app:v2
+          ports:
+            - containerPort: 80
