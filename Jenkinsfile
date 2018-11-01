@@ -12,7 +12,7 @@ def  feSvcNameProduction = "${serviceName}-service-lb-production"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
 
 // ----- Define the url of image in order to pull ----------------------------------
-def  imageContainerBase = "gcr.io/${project}/${appName}:${versImage}"
+def  imageContainerBase = "gcr.io/esparta86project/php-app:v2"
 
 // ----- set the name of container. It should be the same as deployment.yaml -------
 // ----- In each execution of pipeline this generates a new images ----------------
