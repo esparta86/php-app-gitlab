@@ -25,7 +25,7 @@ def  serviceAccount = 'cd-jenkins'
 pipeline {
   agent {
     kubernetes {
-      label 'app-production'
+      label 'app-production-git'
       defaultContainer 'jnlp'
       yaml """
 apiVersion: v1
