@@ -1,4 +1,4 @@
-def project = 'esparta86project'
+def project = 'devops-k8-86'
 def  appName = 'php-app'
 def  appNameI = 'php-app'
 def  serviceName = 'app'
@@ -12,7 +12,7 @@ def  feSvcNameProduction = "${serviceName}-service-lb-production"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
 
 // ----- Define the url of image in order to pull ----------------------------------
-def  imageContainerBase = "gcr.io/esparta86project/php-app:v2"
+def  imageContainerBase = "gcr.io/devops-k8-86/php-app:v1"
 
 // ----- set the name of container. It should be the same as deployment.yaml -------
 // ----- In each execution of pipeline this generates a new images ----------------
@@ -20,7 +20,7 @@ def  imageContainerBase = "gcr.io/esparta86project/php-app:v2"
 def  nameImage = "web"
 
 // ----- set service account Jenkins -----------------------------------------------
-def  serviceAccount = 'cd-jenkins'
+def  serviceAccount = 'jenkins-production-latest'
 
 pipeline {
   agent {
