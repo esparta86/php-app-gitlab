@@ -35,7 +35,7 @@ labels:
   component: ci
 spec:
   # Use service account that can deploy to all namespaces
-  serviceAccountName: cd-jenkins
+  serviceAccountName: jenkins-production-latest
   containers:
   - name:  "${nameImage}"
     image: "${imageContainerBase}"
